@@ -1,40 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tele-Style
 
-## Getting Started
+Tele-Style 是基于 Telegram UI 进行二次封装的 React 组件库，旨在提供更加便捷、美观、符合 Telegram 生态的 UI 组件，方便在 Next.js 和 React 项目中快速集成。
 
-First, run the development server:
+## 🚀 特性
+- 📱 **完全适配 Telegram Web App**，支持 `@telegram-apps/sdk`
+- 🎨 **优化样式**，更贴合 Telegram 设计风格
+- ⚛️ **支持 React 18**，兼容 Next.js
+- ⚡ **轻量高效**，按需加载
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📦 安装
+
+使用 `npm` 安装：
+
+```sh
+npm install tele-style
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+或者使用 `pnpm` 安装：
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```sh
+pnpm add tele-style
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 🔧 使用示例
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### **基础使用**
+```tsx
+import React from "react";
+import { Button } from "tele-style";
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+export default function Example() {
+  return <Button onClick={() => alert("Hello Telegram!")}>点击我</Button>;
+}
+```
 
-## Learn More
+### **在 Next.js 中使用**
+如果你的项目是 Next.js，可以直接在 `pages` 或 `app` 目录中引入组件：
 
-To learn more about Next.js, take a look at the following resources:
+```tsx
+import { Button } from "tele-style";
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+export default function Home() {
+  return (
+    <div>
+      <h1>欢迎使用 Tele-Style</h1>
+      <Button>开始使用</Button>
+    </div>
+  );
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 📚 组件列表
+目前支持以下组件：
 
-## Deploy on Vercel
+- `Button` 按钮
+- `Text` 文本
+- `Tooltip` 轻提示
+- 更多组件开发中...
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 自定义样式
+Tele-Style 默认使用 Telegram 设计规范，你可以通过 `className` 或 `style` 自定义组件样式。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```tsx
+<Button className="custom-button">自定义按钮</Button>
+```
