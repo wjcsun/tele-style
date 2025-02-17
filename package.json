@@ -6,6 +6,7 @@
   "exports": {
     ".": "./dist/index.js"
   },
+  "homePage": "https://github.com/wjcsun/tele-style",
   "scripts": {
     "dev": "next dev",
     "build": "tsup",
