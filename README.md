@@ -1,6 +1,13 @@
+
+# 🚧 **Tele-Style（开发中，暂不可用）敬请期待正式发布版本! ** 🚧
+
 # Tele-Style
 
 Tele-Style 是基于 Telegram UI 进行二次封装的 React 组件库，旨在提供更加便捷、美观、符合 Telegram 生态的 UI 组件，方便在 Next.js 和 React 项目中快速集成。
+
+# 文档
+
+https://wjcsun.github.io/tele-style
 
 ## 🚀 特性
 - 📱 **完全适配 Telegram Web App**，支持 `@telegram-apps/sdk`

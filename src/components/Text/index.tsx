@@ -1,6 +1,6 @@
 import { Text as TgText, TextProps } from "@telegram-apps/telegram-ui";
-
-interface TgTextProps extends TextProps {
+import React from "react";
+export interface TgTextProps extends TextProps {
   contentKey?: string | number,
   color?: string,
   fontSize?: number | string,

@@ -35,7 +35,7 @@ const meta = {
       table: { type: { summary: 'ElementType' } },
     },
     autoUpdateOnTargetResize: { type: 'boolean', description: '当目标元素大小时，选择加入功能将自动更新Popper的位置。' },
-     placement: {
+    placement: {
       control: { type: "select" },
       options: ["auto", "auto-start","auto-end","top","right","bottom","left","top-start","top-end","right-start","right-end","bottom-start","bottom-end","left-start","left-end"],
        description: "默认情况下，组件将自动选择最佳位置",
@@ -59,8 +59,15 @@ export const Default: Story = {
     const ref = useRef<HTMLDivElement>(null)
     const [Show, setShow] = useState(true)
     return (
-       <>
-        <Button style={{ margin: '0 auto' }} ref={ref} onClick={() => setShow(!Show)}>
+       <div style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: 580,
+      height: 300,
+      margin: '0 auto'
+    }}>
+        <Button ref={ref} onClick={() => setShow(!Show)}>
           {Show ? 'Hide' : 'Show'}
         </Button>
         {Show && (
@@ -68,7 +75,7 @@ export const Default: Story = {
             Hold to record audio. Tap to switch to video.
           </Tooltip>
         )}
-      </>
+      </div>
     )
   },
 };

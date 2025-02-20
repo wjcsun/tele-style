@@ -10,7 +10,7 @@ const meta = {
     value: {
       description: '进度条的当前值表示为百分比。值应在0到100之间',
       Control: 'number',
-      type: 'number'
+      type: 'number',
     },
     duration: {
       description: '几秒内加载完进度条',
@@ -37,5 +37,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {}
+  args: {
+    value: 50,
+  }
 };

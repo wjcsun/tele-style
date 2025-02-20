@@ -1,12 +1,12 @@
 import { Progress as TgProgress, ProgressProps, CircularProgress, CircularProgressProps } from "@telegram-apps/telegram-ui";
 import { useEffect, useState } from "react";
-
-interface Props extends ProgressProps, Omit<CircularProgressProps, keyof ProgressProps> {
+import React from "react";
+export interface ProgressTgProps extends ProgressProps, Omit<CircularProgressProps, keyof ProgressProps> {
   duration?: number;
   defaultType?: boolean;
 }
 
-export default function Progress({ value = 100, duration = 0, defaultType = true, ...rest }: Props) {
+export default function Progress({ value = 100, duration = 0, defaultType = true, ...rest }: ProgressTgProps) {
   const [progressVal, setProgressVal] = useState(0)
 
   useEffect(() => {
